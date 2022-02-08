@@ -1,0 +1,11 @@
+原生jdbc连接过程
+1.注册数据库的驱动
+Class.for("com.mysql.jdbc.Driver")
+2.获取数据库的连接
+conn = DriverManager.getConnection(url,username,password);
+3.获取数据库操作对象
+stmt = conn.createStatement();
+4.编写SQL语句
+String sql = "select * from tb_*** where id = 100";
+5.执行数据库操作
+ResultSet rs = stmt.executeQuery(sql);
